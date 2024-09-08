@@ -1,0 +1,394 @@
+nav {
+    position:fixed;
+    width:100%;
+    top: 0;
+    z-index:1000;
+}
+
+nav > ul, .s_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.flex_nav > li, .s_li {
+    background-color: rgba(217, 217, 217, 0.75);
+    border-radius: 30px;
+    margin-left: 5px;
+}
+
+.flex_nav {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:140px;
+}
+
+div.flex_nav > li a, .s_a {
+    display: block;
+    padding: 12px 14px;
+    font-size: 19px;
+    color:black;
+    text-decoration: none;
+}
+
+.nav_highlight {
+    background-color: rgba(212, 175, 55, 0.75) !important;
+}
+
+li.nav_highlight:hover {
+    background-color: rgba(235, 215, 0, 0.85) !important;
+}
+
+nav > ul > li img {
+    height:120px;
+    width:120px;
+    padding:10px;
+    margin-left:40px;
+    float:left;
+}
+
+.nav_spacer {
+    width:30px;
+}
+
+/* Dropdown menu */
+div.flex_nav > li > ul > div.dropdown_buttons > li, div.dropdown_buttons > li {
+    list-style-type: none;
+    display:block;
+    font-size: 17px;
+    /* padding:7px 2px 7px 0px; */
+}
+
+div.flex_nav > li:hover, .s_li:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+    
+div.flex_nav > li > ul {
+    display: none;
+    padding: 7px 5px 5px 0px;
+    width:200px;
+    position:absolute;
+    text-align: left;
+    padding-inline-start:0px;
+}
+
+div.flex_nav > li:hover ul {
+    display:block;
+}
+
+.dropdown_buttons {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding-inline-start:7px;
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+
+.triangle {
+    display:flex;
+    margin:5px;
+    margin-left: 10px;
+    height:12px;
+    width:12px;
+    background-color:rgb(121, 121, 121);
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    transform: rotate(-45deg);
+}
+
+div.flex_nav > li:hover > a > span.triangle {
+    transform: rotate(135deg);
+    background-color: black;
+    transform-origin: 40% 75%;
+}
+
+div.flex_nav > li > a, .s_a {
+    display:inline-flex;
+} 
+
+/* Responsive Nav bar */
+.collapse_nav {
+    width:45px;
+    height:45px;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    position:absolute;
+    margin-right: 95px;
+    z-index: 1500;
+    display: none;
+}
+
+span.s_bars {
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 45px;
+    height: 8px;
+    background-color: #333;
+    display:flex;
+    margin-top: 6px;
+}
+
+/* Show/hide nav sidebar bar */
+
+input[type=checkbox] {
+    position: absolute;
+    height:0px;
+    left: -9999px;
+}
+
+label { 
+   -webkit-appearance: push-button;
+   -moz-appearance: button; 
+   display: inline-block;
+   cursor: pointer;
+}
+
+/* label > span {
+    height:100%;
+    width:100%;
+} */
+
+.sidebar{
+    background: white;
+    width: 350px;
+    height: 100vh;
+    display: block;
+    z-index:2000;
+    position:absolute;
+    top: 0;
+    right:0;
+    border-radius: 10px 0px 0px 10px;
+    transform:translateX(480px);
+    padding:40px;
+}
+
+.sidebar_background {
+    background: rgba(0,0,0,0.25);
+    width: 100vw;
+    height: 100vh;
+    line-height: 100px;
+    display: block;
+    z-index:1500;
+    position:absolute;
+    top: 0;
+    left:0;
+    display:none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ .sidebar {
+    display:block;
+    animation-name: sidebar_1;
+    animation-duration:0.4s;
+    animation-fill-mode: forwards;
+}
+
+input[type=checkbox] ~ .sidebar {
+    display:block;
+    animation-name: sidebar_2;
+    animation-duration:0.4s;
+    animation-fill-mode: forwards;
+}
+
+input[type=checkbox]:checked ~ .sidebar_background {
+    display:block;
+    visibility: visible;
+    animation-name: s_background_1;
+    animation-duration:0.2s;
+    animation-fill-mode: forwards;
+}
+
+input[type=checkbox] ~ .sidebar_background {
+    display:block;
+    animation-name: s_background_2;
+    animation-duration:0.2s;
+    animation-fill-mode: forwards;
+}
+
+/* Sidebar content */
+.s_webpages {
+    height:525px;
+    position:absolute;
+    width:350px;
+}
+
+.s_header {
+    width:100%;
+    display:flex;
+    /* justify-content: space-between; */
+}
+
+.s_header > h1 {
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 1.52rem;
+}
+
+.s_header > a > img {
+    width:90px;
+    height:90px;
+    transform: translateY(-25px);
+}
+
+.s_close, .label_x {
+    clip-path: polygon(15% 0, 0 16%, 35% 50%, 0 85%, 15% 100%, 50% 65%, 85% 100%, 100% 85%, 65% 50%, 100% 15%, 85% 0, 50% 35%);
+    background-color: #333;
+    height:20px;
+    width:20px;
+    margin:10px;
+    position:absolute;
+    right:50px;
+}
+
+.s_li {
+    background-color: white;
+    padding:5px 0px 5px;
+    margin-bottom: 5px;
+    width:100%;
+}
+
+.s_li:hover {
+    background-color: white;
+}
+
+.s_nav_highlight {
+    color:rgb(212, 175, 55) !important;
+}
+
+.s_ul_page2 {
+    position: absolute;
+    transform: translateX(480px);
+    height:100%;
+    width: 100%;
+    background-color: white;
+    z-index: 5000;
+}
+
+.s_arrow {
+    border: solid var(--primary);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.s_right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.s_left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.s_label {
+    width:100%;
+}
+
+input.st_page2[type=checkbox]:checked ~ div.s_ul_page2 {
+    animation-name: s_content_1;
+    animation-duration:0.2s;
+    animation-fill-mode: forwards;
+}
+
+input.st_page2[type=checkbox] ~ div.s_ul_page2 {
+    animation-name: s_content_2;
+    animation-duration:0.2s;
+    animation-fill-mode: forwards;
+}
+
+
+/* Animation */
+
+/* Animation for Responsive Sidebar */
+@keyframes sidebar_1 {
+    from {transform:translateX(480px)}
+    to {transform:translate(0px)}
+}
+
+@keyframes sidebar_2 {
+    from{transform:translate(0px)}
+    to {transform:translate(480px)}
+}
+
+@keyframes s_background_1 {
+    from{background: rgba(0,0,0,0);}
+    to{background: rgba(0,0,0,0.25);}
+}
+
+@keyframes s_background_2 {
+    from{background: rgba(0,0,0,0.25); visibility: visible;}
+    to{background: rgba(0,0,0,0); visibility: hidden;}
+}
+
+@keyframes s_content_1 {
+    from{transform: translateX(480px);}
+    to{transform: translateX(0px);}
+}
+
+@keyframes s_content_2 {
+    from{transform: translateX(0px);}
+    to{transform: translateX(480px);}
+}
+
+/* Media query for mobile */
+/* Adaptive nav bar */
+/* Hide sidebar when screen is 900px or wider if it is present */
+@media screen and (min-width: 950px) {
+    input[type=checkbox]:checked ~ .sidebar {
+        display: none !important;
+    }
+
+    input[type=checkbox]:checked ~ .sidebar_background {
+        display:none;
+    }
+}
+
+/* -- */
+@media screen and (max-width: 950px) {
+    .collapse_nav {
+        display:block;
+    }
+
+    .pages {
+        display:none;
+    }
+}
+
+/* -- */
+@media screen and (max-width:500px) {
+    nav > ul > li img {
+        width:100px;
+        height:100px;
+    }
+
+    .toggle-nav {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width:465px) {
+    .sidebar {
+        width: 225px;
+    }
+
+    .s_header > h1 {
+        display:none;
+    }
+
+    li.collapse_nav {
+        margin-right: 35px !important;
+    }
+
+    nav > ul > li img {
+        margin-left: 10px;
+    }
+}

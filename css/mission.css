@@ -1,0 +1,271 @@
+body {
+    background-color: white;
+    counter-reset: values_counter;
+}
+
+/* Banner */
+.mission_banner_mv {
+    display:flex;
+    padding:var(--nav_spacer) 105px 50px 125px;
+    background-image: url("../images/Photos 2021-2022/Banner Photos/PT Mission and Vision.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    overflow:auto;
+    background-size:cover;
+    border-style:none;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color:white;
+}
+
+.mission_banner_container_mv {
+    max-width: 985px;
+}
+
+/* Mission and Visions section */
+.mission_and_vision_container_mv {
+    padding: 25px 0px 25px 0px;
+}
+
+.column_mv {
+    width:100%;
+    height:fit-content;
+    display:flex;
+    justify-content: center;
+}
+
+.columm_secondary_mv {
+    background-color: var(--secondary);
+}
+
+/* .line_mv {
+    height:auto;
+    border-left:grey solid 1.5px;
+    border-radius: 10px;
+    margin:15px 0px 15px 0px;
+} */
+
+.mission_and_vision_header_mv {
+    display:flex;
+    align-items: center;
+}
+
+.mission_and_vision_box_mv {
+    margin:20px;
+    padding:25px;
+    border-radius: 20px;
+    max-width: 880px;
+}
+
+div.mission_and_vision_header_mv > h1 {
+    margin:0px;
+    font-weight: normal;
+    padding:10px 10px 10px 25px;
+}
+
+div.mission_and_vision_header_mv > img, .values_header_box_mv > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+/* Values Section */
+.values_section_mv {
+    justify-content: center;
+    display:flex;
+    padding:25px 0px 50px 0px;
+}
+
+.values_section_container_mv {
+    max-width: 1000px;
+    /* padding:25px; */
+}
+
+.values_header_container_mv {
+    display:flex;
+    align-items: center;
+}
+
+.values_header_spacer_mv {
+    width:80px;
+    height:80px;
+}
+
+.values_header_box_mv {
+    max-width:880px;
+    width: 880px;
+    display:flex;
+    padding:60px;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-bottom:0px;
+    margin-bottom: 10px;
+    align-items: center;
+    margin: 0px;
+}
+
+.values_header_mv {
+    padding: 0px 10px 0px 25px;
+    max-width: 880px;
+    margin:0px;
+    height:fit-content;
+}
+
+.values_para_mv {
+    padding-left: 130px;
+}
+
+div.values_container_mv > h1 {
+    text-decoration: none;
+}
+
+div.values_container_mv > ul {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+div.values_container_mv > ul > li {
+    text-indent: 0px;
+    padding: 10px 0px 10px 0px;
+    margin-block-start: -2em;
+    margin-block-end: -2em;
+    display: flex;
+    margin-top: 12px;
+    
+}
+
+div.values_container_mv > ul > li:before {
+    counter-increment: values_counter;
+    content: counter(values_counter);
+    text-align: center;
+    position:relative;
+    left: -20px;
+    top:10px;
+    background-color:var(--primary);
+    color:white;
+    border-radius: 100px;
+    display:inline-block;
+    width:50px;
+    min-width: 50px;
+    height:50px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+div.values_container_mv > ul > li > p {
+    line-height: 1.6;
+    padding-right: 90px;
+}
+
+div.values_container_mv > ul > li > p > strong {
+    font-size:24px;
+}
+
+/* Triangle divider */
+.triangle_container_mv {
+    display:block;
+    width:100%;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.triangle_mv {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: var(--primary);
+    height:60px;
+    width:100%;
+    display: block;
+    transform: translateY(0.4px);
+}
+
+/* Progress Section */
+.progress_container_mv {
+    background-color: var(--primary);
+    color:white;
+}
+
+div.progress_container_mv > h1 {
+    margin:0px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/* Media Query for mobile */
+@media screen and (max-width:1050px) {
+    .values_header_box_mv {
+        width: 100%;
+        padding:50px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .mission_and_vision_container_mv {
+        display:block;
+    }
+
+    .column_mv {
+        width:100%;
+    }
+
+    .line_mv {
+        display:none;
+    }
+
+    .mission_and_vision_box_mv {
+        padding:20px;
+    }
+
+    .values_header_box_mv {
+        padding:40px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .values_section_container_mv {
+        padding:0px;
+    }
+
+    .values_container_mv {
+        padding:10px;
+    }
+
+    .values_container_mv > ul {
+        padding:0px;
+    }
+}
+
+@media screen and (max-width:435px) {
+    .mission_banner_mv {
+        padding: var(--nav_spacer) 50px 50px 50px;
+    }
+
+    .values_header_spacer_mv {
+        height:5px;
+    }
+
+    div.values_container_mv > ul > li > p {
+        padding-right: 15px;
+    }
+
+    .values_para_mv {
+        padding-left: 0px;
+        padding:0px 18px 0px 18px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    div.mission_and_vision_header_mv > img, .values_header_box_mv > img {
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+    }
+}

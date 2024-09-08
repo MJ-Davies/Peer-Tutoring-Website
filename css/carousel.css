@@ -1,0 +1,74 @@
+.carousel_container {  
+    background-color: var(--secondary);
+}
+
+.carousel_header_container {
+    width:500px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.carousel_header {
+    text-align: center;
+}
+
+.carousel {
+    padding: 20px 0px 60px 0px;
+}
+
+.gallery-cell {
+    width: 45%;
+    margin-right: 70px;
+    background: white;
+    counter-increment: gallery-cell;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding:25px 50px 25px 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+  
+div.gallery-cell > p > sub {
+    font-weight: bold;
+    float:right;
+    padding-top: 25px;
+    color: var(--primary);
+    opacity: 95%;;
+}
+
+div.gallery-cell > p > sub::before {
+    content:"- "
+}
+
+.arrow {
+    color: var(--tertiary);
+}
+
+/* Media queries for mobile */
+/* Level 4 media query */
+@media (pointer:coarse) and (hover:none) {
+    .flickity-button {
+        background:#fff !important;
+    }
+}
+
+/* Viewport media query */
+@media screen and (max-width:850px) {
+    .gallery-cell {
+        margin-right: 25px;
+        width:80%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .carousel_header_container {
+        width:unset;
+    }
+
+    .flickity-button { /* This later on should use @container queries once it is developed for cross browser compatibility, for more details see https://github.com/w3c/csswg-drafts/issues/5796 */
+        top:0 !important;
+        margin-top: 50px;
+    }
+    
+}

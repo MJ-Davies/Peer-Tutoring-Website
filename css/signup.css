@@ -1,0 +1,118 @@
+/* Image banner */
+.sign_up_banner_su {
+    display:flex;
+    padding:calc(var(--nav_spacer) + 200px) 105px 100px 125px;
+    background-image: url("../images/Photos\ 2021-2022/Banner Photos/Ready to Sign Up_.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    overflow:auto;
+    background-size:cover;
+    border-style:none;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color:white;
+}
+
+.sign_up_container_su {
+    max-width: 985px;
+}
+
+/* Sign up Sections */
+.sign_up_sections_su {
+    text-align: center;
+    background-color: var(--secondary);
+    padding:25px 100px 25px 100px;
+}
+
+.sections_list_su {
+    max-width: 1075px;
+    display:flex;
+    justify-content: space-evenly;
+    margin:auto;
+}
+
+.sections_su {
+    width:33%;
+    margin:17px;
+    overflow:hidden;
+    background-color: white;
+    border-radius: 10px;
+    position:relative;
+}
+
+.sections_su > img {
+    width:100%;
+    height:auto;
+}
+
+.sections_su > p {
+    text-align: left;
+    margin-bottom: 100px;
+
+}
+
+.sections_su > h1, .sections_su > p {
+    padding:15px 35px 0px 35px;
+}
+
+.button_su {
+    width:100%;
+    background-color: var(--primary);
+    color:white;
+    font-size: 22px;
+    border-radius: 0px;
+    bottom:0;
+    left:0;
+    position: absolute;
+    font-weight: bold;
+}
+
+/* Media query for mobile */
+
+@media screen and (max-width:1180px) {
+    .sections_list_su {
+        display:block;
+    }
+
+    .sign_up_sections_su {
+        padding:30px 175px 30px 175px;
+    }
+
+    .sections_su {
+        width:100%;
+    }
+    
+    .sign_up_banner_su {
+        padding: var(--nav_spacer) 105px 50px 125px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .sign_up_sections_su {
+        padding:30px 100px 30px 100px;
+    }
+
+    .sections_su {
+        width:100%;
+        margin:0px;
+        margin-bottom: 25px;
+    }
+
+    .sections_su > h1 {
+        word-wrap: break-word;
+        font-size: 29px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sign_up_sections_su {
+        padding:30px 50px 30px 50px;
+    }
+}
+
+@media screen and (max-width:435px) {
+    .sign_up_banner_su {
+        padding: var(--nav_spacer) 50px 50px 50px;
+    }
+}

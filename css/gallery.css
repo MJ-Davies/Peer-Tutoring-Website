@@ -1,0 +1,95 @@
+body {
+    background-color: var(--secondary);
+    background-image: linear-gradient(var(--secondary), #aaaaaa);
+}
+
+/* Image banner */
+.banner_gal {
+    display:flex;
+    padding:var(--nav_spacer) 105px 50px 125px;
+    background-image: url("../images/Photos\ 2021-2022/Banner Photos/PT Gallery.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    overflow:auto;
+    background-size:cover;
+    border-style:none;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+	color:white;
+}
+
+.container_gal {
+    max-width: 985px;
+}
+
+/* Masonry Gallery CSS */
+.grid-wrapper > div > img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.grid-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	border: transparent solid 5px;
+}
+
+.grid-wrapper > div > img:hover {
+	border:var(--primary) solid 5px;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 18px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+    padding:38px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+	max-width: 1500px;
+	margin:auto;
+}
+
+.grid-wrapper .wide {
+	grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+	grid-row: span 2;
+}
+
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+/* Media query for mobile */
+@media screen and (max-width:620px) {
+	.grid-wrapper {
+		display:block;
+		padding:50px 40px 50px 40px;
+	}
+
+	.grid-wrapper > div > img {
+		margin-top: 12.5px;
+		margin-bottom: 12.5px;
+	}
+}
+
+@media screen and (max-width:435px) {
+    .banner_gal {
+        padding: var(--nav_spacer) 50px 50px 50px;
+    }
+}
